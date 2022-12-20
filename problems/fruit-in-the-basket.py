@@ -1,3 +1,4 @@
+#time exceeded solution
 import collections
 class Solution(object):
     def totalFruit(self, fruits):
