@@ -1,7 +1,7 @@
 class Disjoint:
     def __init__(self, n):
         self.rank   = [0 for i in range(0,n+1)]
-        self.size   = [0 for i in range(0,n+1)]
+        self.size   = [1 for i in range(0,n+1)]
         self.parent = [i for i in range(0,n+1)]
     
     def findUltPar(self,node):
