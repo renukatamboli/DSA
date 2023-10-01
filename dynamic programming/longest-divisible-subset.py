@@ -4,11 +4,10 @@ class Solution:
     def LargestSubset(self, n, arr):
         arr.sort()
         dp = [0 for _ in range(0,n+1)]
-        h = [0 for _ in range(0,n)]
+        h = [i for i in range(0,n)]
         maxi = 0
         lastIndex = 0
         for ind in range(0,n):
-            h[ind] = ind
             for prev in range(0,ind):
                 if arr[ind] % arr[prev] == 0 and 1 + dp[prev] > dp[ind]:
                     dp[ind] = 1 + dp[prev]
