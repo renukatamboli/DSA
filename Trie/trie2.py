@@ -53,3 +53,12 @@ class Trie:
                 return 0
             node = node.get(word[i])
         return node.cntPrefix
+        
+    def erase(self,word):
+        node = self.root
+        for i in range(0,len(word)):
+            if not node.containsKey(word[i]):
+                return
+            node = node.get(word[i])
+            node.deletePrefix()
+        return node.deleteEnd()
